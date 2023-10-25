@@ -1,0 +1,51 @@
+#container {
+    display: flex;
+    padding: 1rem;
+    background-color: #eee;
+}
+
+.main-menu {
+    margin: 0 .5rem;
+    padding: 0 1rem;
+    border: 1px solid #c8c7c7;
+    border-radius: 20px;
+    position: relative;
+}
+
+.main-menu > p:hover {
+    font-weight: 700;
+    cursor: pointer;
+    color: red;
+}
+
+.main-menu:hover .sub-menu {
+    display: block;
+    animation-name: showmenu;
+    animation-duration: 3s;
+}
+
+@keyframes showmenu {
+    /* from {background-color: #eee;}
+    to {background-color:  #b6acac;} */
+    from {opacity: 0.2;}
+    to {opacity: 1;}
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    background-color: #b6acac;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.sub-menu p {
+    padding: .1rem 1.2rem;
+}
+
+.sub-menu p:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
